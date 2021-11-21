@@ -1,0 +1,40 @@
+{
+  "name": "chrome-extension-template-with-nextjs",
+  "private": true,
+  "scripts": {
+    "bundle": "webpack build --mode production --config ./webpack/webpack.config.js",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export -o extensions/dist && npm run bundle"
+  },
+  "dependencies": {
+    "next": "12.0.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-error-boundary": "^3.1.4"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.164",
+    "@types/node": "16.11.7",
+    "@types/react": "17.0.35",
+    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/parser": "^4.33.0",
+    "eslint": "7.32.0",
+    "eslint-config-next": "12.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-tailwindcss": "^1.17.2",
+    "prettier": "^2.4.1",
+    "tailwindcss": "^2.2.19",
+    "ts-loader": "^9.2.6",
+    "typescript": "4.5.2",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.9.1"
+  }
+}
