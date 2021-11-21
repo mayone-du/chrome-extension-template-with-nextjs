@@ -6,11 +6,18 @@ import type { Message } from "src/types";
 // eslint-disable-next-line no-console
 console.log("content script");
 
+// If you want to get the DOM of the open page, you can do it here.
+// document.querySelector("#some-id");
+
 // wait sendMessage
 chrome.runtime.onMessage.addListener((request: Message, sender, sendResponse) => {
-  // eslint-disable-next-line no-console
-  console.log("onMessage: ", request, sender, sendResponse);
-  sendResponse({ id: "foo" });
+  if (request.action === "getId") {
+    // eslint-disable-next-line no-console
+    console.log("onMessage: ", request, sender, sendResponse);
+    sendResponse({ id: "sampleId" });
+  } else {
+    sendResponse({ id: "No Action" });
+  }
 });
 
 export {};

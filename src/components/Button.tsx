@@ -10,7 +10,7 @@ export const Button: React.VFC = () => {
       const currentTabId = currentTab.id ?? 0;
 
       // content script communication
-      chrome.tabs.sendMessage<Message>(currentTabId, { type: "hoge" }, (res: Response) => {
+      chrome.tabs.sendMessage<Message>(currentTabId, { action: "getId" }, (res: Response) => {
         setState(res);
       });
     });
@@ -23,7 +23,7 @@ export const Button: React.VFC = () => {
   if (!state) return <div>Loading...</div>;
 
   return (
-    <button onClick={handleClick} className="block p-2 rounded border">
+    <button onClick={handleClick} className="block p-2 mx-auto rounded border">
       Click Me!
     </button>
   );

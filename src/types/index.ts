@@ -1,5 +1,5 @@
 export type Message = {
-  type: "hoge";
+  action: "getId";
 };
 
 export type Response = {
