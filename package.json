@@ -2,11 +2,11 @@
   "name": "chrome-extension-template-with-nextjs",
   "private": true,
   "scripts": {
-    "bundle": "webpack build --mode production --config ./webpack/webpack.config.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "bundle": "webpack build --mode production --config ./webpack/webpack.config.js",
     "export": "next build && next export -o extensions/dist && npm run bundle"
   },
   "dependencies": {

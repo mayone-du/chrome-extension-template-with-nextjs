@@ -23,7 +23,7 @@ const IndexPage: CustomNextPage = () => {
 
       <Button />
 
-      {/* Chrome拡張用のスクリプトを2種類読み込む */}
+      {/* Loading Chrome scripts */}
       <script defer src="../content.js"></script>
       <script defer src="../background.js"></script>
     </div>

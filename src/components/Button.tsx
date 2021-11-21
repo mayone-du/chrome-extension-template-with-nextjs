@@ -5,13 +5,12 @@ export const Button: React.VFC = () => {
   const [state, setState] = useState<Response>({ id: "" });
   useEffect(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      // 現在のタブ情報を取得
+      // current tab info
       const currentTab = tabs[0];
       const currentTabId = currentTab.id ?? 0;
 
-      // content scriptと通信
+      // content script communication
       chrome.tabs.sendMessage<Message>(currentTabId, { type: "hoge" }, (res: Response) => {
-        // content scriptからのレスポンスをstateにセット
         setState(res);
       });
     });
