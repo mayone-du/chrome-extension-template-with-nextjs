@@ -1,7 +1,7 @@
 import type { CustomNextPage } from "next";
 import { Layout } from "src/layout";
 
-const IndexPage: CustomNextPage = () => {
+const SamplePage: CustomNextPage = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold whitespace-nowrap">Chrome Extension Template</h1>
@@ -9,6 +9,6 @@ const IndexPage: CustomNextPage = () => {
   );
 };
 
-export default IndexPage;
+export default SamplePage;
 
-IndexPage.getLayout = Layout;
+SamplePage.getLayout = Layout;
