@@ -14,7 +14,7 @@ chrome.runtime.onMessage.addListener((request: Message, sender, sendResponse) =>
   if (request.action === "getId") {
     // eslint-disable-next-line no-console
     console.log("onMessage: ", request, sender, sendResponse);
-    sendResponse({ id: "sampleId" });
+    sendResponse({ id: "Got Content Script ID" });
   } else {
     sendResponse({ id: "No Action" });
   }
